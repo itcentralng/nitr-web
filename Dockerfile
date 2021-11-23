@@ -1,7 +1,7 @@
 ### STAGE 1: Build ###
 FROM node:latest AS build
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 RUN yarn install
 COPY . .
 RUN yarn run build
