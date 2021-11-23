@@ -10,6 +10,7 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AboutNitrComponent } from './about-nitr/about-nitr.component';
+import { LatestNewsComponent } from './latest-news/latest-news.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutNitrComponent } from './about-nitr/about-nitr.component';
     DepartmentsComponent,
     TopNavbarComponent,
     CarouselComponent,
-    AboutNitrComponent
+    AboutNitrComponent,
+    LatestNewsComponent
   ],
   imports: [
     BrowserModule,
