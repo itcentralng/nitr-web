@@ -7,6 +7,7 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 import { HomeComponent } from './pages/home/home.component';
 import { NewsComponent } from './pages/news/news.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
+import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
     MaintenanceComponent,
     HomeComponent,
     NewsComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    TopNavbarComponent
   ],
   imports: [
     BrowserModule,
