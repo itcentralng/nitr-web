@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NewsComponent } from './pages/news/news.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
     HomeComponent,
     NewsComponent,
     DepartmentsComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
