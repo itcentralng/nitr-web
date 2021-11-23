@@ -12,6 +12,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { AboutNitrComponent } from './about-nitr/about-nitr.component';
 import { LatestNewsComponent } from './latest-news/latest-news.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
     CarouselComponent,
     AboutNitrComponent,
     LatestNewsComponent,
-    UpcomingEventsComponent
+    UpcomingEventsComponent,
+    FooterCopyrightComponent
   ],
   imports: [
     BrowserModule,
