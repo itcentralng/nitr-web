@@ -2,9 +2,9 @@
 FROM node:latest AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-RUN yarn install
+RUN npm install
 COPY . .
-RUN yarn run build
+RUN npm run build
 ### STAGE 2: Run ###
 FROM nginx:1.17.1-alpine
 COPY nginx.conf /etc/nginx/nginx.conf
