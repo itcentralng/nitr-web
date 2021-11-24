@@ -45,7 +45,11 @@ import { FooterCopyrightComponent } from './components/footer-copyright/footer-c
     LatestNewsComponent,
     UpcomingEventsComponent,
     FooterCopyrightComponent,
-
+  ],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule,
+    // MBD Modules
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,
@@ -62,7 +66,6 @@ import { FooterCopyrightComponent } from './components/footer-copyright/footer-c
     MdbTooltipModule,
     MdbValidationModule,
   ],
-  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
