@@ -1,126 +1,39 @@
-<div class="container">
-    <div class="grid-100 grid-parent">
-        <div class="nav">
-            <div class="logo">
-                <h2>logo</h2>
-                <h1>Nigerian Institute For <br>
-                    Trypanosomiasis Research
-                </h1>
+<app-top-navbar></app-top-navbar>
 
-            </div>
-            <nav>
-                <ul>
-                    <li>home</li>
-                    <li>
-                        departments
-                    </li>
-                    <li>
-                        about
-                    </li>
-                    <li>
-                        news
-                    </li>
-                    <li>
-                        contact
-                    </li>
-                </ul>
-            </nav>
+<app-carousel></app-carousel>
 
+<app-about-nitr></app-about-nitr>
+
+<app-latest-news></app-latest-news>
+
+<app-upcoming-events></app-upcoming-events>
+
+<!--Register-->
+<div class="container py-5">
+  <div class="card" style="background-color: #4fce2f">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8 px-5 py-5">
+          <h4>Lorem Ipsum wee</h4>
+          <p>
+            All the Lorem Ipsum generators on the Internet tend to repeat
+            predefined chunks as necessary
+          </p>
         </div>
-        <div class="slider">
-            <div class="container">
-                <div class="grid-5 grid-parent">
-                    <div class="backward">
-                        <i class="fas fa-chevron-left"></i>
-
-                    </div>
-                </div>
-                <div class="grid-90 grid-parent">
-                    <div class="photos">
-
-                    </div>
-                </div>
-                <div class="grid-5 grid-parent">
-                    <div class="forward">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                </div>
-
-            </div>
+        <div class="col-md-4 p-5">
+          <button
+            class="mt-3 btn btn-white px-5 text-success fw-bold"
+            type="button"
+            id="button-addon1"
+            mdbRipple
+            rippleColor="success"
+          >
+            Register
+          </button>
         </div>
-        <div class="aboutUs">
-                <h1>About <span>NITR</span></h1>
-                <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                    The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                    as opposed to using 'Content here, content here', making it look like readable English.
-                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
-                    and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
-                </p>
-                <a href="#">Read More<i class="fas fa-chevron-right"></i>
-                </a>
-                
-
-        
-        </div>
-        <div class="aboutImage">
-            
-        </div>
-        </div>
-
-
-        
-
+      </div>
     </div>
-    <div class="footer">
-            
-        <div class="grid-40">
-            <footer>
-                <h1>
-                    Contact Info
-                </h1>
-                <dl>
-                    <dt>Office Address</dt>
-                    <dd>1 Surame Rd, Ungwan Rimi 802125, Kaduna</dd>
-                    <dt>Phone</dt>
-                    <dd>(234) 0000000000</dd>
-                    <dt>Email Address</dt>
-                    <dd>info@nitr.gov.ng</dd>
-                </dl>
-                
+  </div>
+</div>
 
-
-            </footer>
-
-        </div>
-        <div class="grid-60">
-            <footer>
-                <h1>Newsletter</h1>
-                <p>Subscribe to our newsletter to instantly receive news about the project</p>
-                <form action="newsletter">
-                    <div class="fullname">
-                        <label for="fullname">Fullname <span>*</span></label><br>
-                        <input type="text">
-                    </div>
-                    <div class="email">
-                        <label for="name">Email Address <span>*</span></label><br>
-                        <input type="email">
-
-                    </div>
-
-                </form>
-            </footer>
-
-        </div>
-        <div class="divider">
-            
-        </div>
-        <div class="copywrite">
-            <div class="grid-100">
-                <div>
-                    <p>&copy; Copywrite 2021 <span>NITR</span></p>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<app-footer-copyright></app-footer-copyright>
