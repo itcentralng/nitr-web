@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./about-nitr.component.css']
 })
 export class AboutNitrComponent implements OnInit {
-  public about: any = {title: '', content: '', image: ''};
+  public about: any = {title: '', content: '', image: {url: ''}};
   private aboutPage = 'about';
   private base = environment.API;
   public storage = environment.STORAGE;
