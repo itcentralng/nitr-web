@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about-nitr',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-nitr.component.css']
 })
 export class AboutNitrComponent implements OnInit {
-
-  constructor() { }
+  public about: any = {title: '', content: '', image: ''};
+  private aboutPage = 'about';
+  private base = environment.API;
+  public storage = environment.STORAGE;
+  constructor(
+    private api: ApiService,
+  ) { }
 
   ngOnInit(): void {
+    this.api.get(this.base+this.aboutPage).subscribe(response => {
+      this.about = response;
+    })
   }
 
 }

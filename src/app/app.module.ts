@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// HTTP
+import { HttpClientModule } from '@angular/common/http';
+
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
@@ -48,6 +51,7 @@ import { FooterCopyrightComponent } from './components/footer-copyright/footer-c
   ],
   imports: [
     BrowserModule, 
+    HttpClientModule,
     AppRoutingModule,
     // MBD Modules
     MdbAccordionModule,

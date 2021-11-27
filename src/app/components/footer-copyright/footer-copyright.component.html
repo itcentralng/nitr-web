@@ -5,27 +5,28 @@
     <!--Grid row-->
     <div class="row">
       <!--Grid column-->
-      <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
         <h5 class="text-uppercase">Contact</h5>
         <hr
           class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
           style="width: 60px"
         />
         <p class="mr-3 fw-bold">Office Address</p>
-        <p class="fw-lighter">1 Surame Rd, Ungwan Rimi 802125, Kaduna</p>
+        <p class="fw-lighter">{{contact.address}}</p>
 
         <p class="mr-3 fw-bold">Phone</p>
-        <p class="fw-lighter">(234) 0000000000</p>
+        <p class="fw-lighter">{{contact.phone}}</p>
 
         <p class="mr-3 fw-bold">Email Address</p>
         <p>
-          <a class="text-white fw-lighter" href="mailto:info@nitr.gov.ng"
-            >info@nitr.gov.ng</a
+          <a class="text-white fw-lighter" href="mailto:{{contact.email}}"
+            >{{contact.email}}</a
           >
         </p>
       </div>
       <!--Grid column-->
-
+      
+      
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
         <h5 class="text-uppercase">Newsletter</h5>
@@ -78,6 +79,28 @@
         </form>
       </div>
       <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+        <hr
+          class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px"
+        />
+        <p>
+          <a class="text-white fw-lighter" href="https://admin.nitr.gov.ng/admin"
+            >Admin</a
+          >
+        </p>
+        
+        <p>
+          <a class="text-white fw-lighter" href="https://privateemail.com/"
+            >Webmail</a
+          >
+        </p>
+      </div>
+      <!--Grid column-->
+
     </div>
     <!--Grid row-->
   </div>

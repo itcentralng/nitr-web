@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer-copyright',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer-copyright.component.css'],
 })
 export class FooterCopyrightComponent implements OnInit {
-  constructor() {}
+  public contact: any = {address: '', phone: '', email: ''};
+  private contactPage = 'contact';
+  private base = environment.API;
+  constructor(
+    private api: ApiService,
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.api.get(this.base+this.contactPage).subscribe(response => {
+      this.contact = response;
+    })
+  }
+
 }

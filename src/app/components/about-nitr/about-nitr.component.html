@@ -4,20 +4,20 @@
     <div class="row">
       <div class="col-md-6">
         <h5 class="text-uppercase">
-          About <span class="text-success">NITR</span>
+          {{about.title.split(' ')[0]}} <span class="text-success">{{about.title.split(' ')[1]}}</span>
         </h5>
         <hr
           class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
           style="width: 60px"
         />
         <p class="card-text">
-          There certainly was a good vision for Nigeria's food self-sufficiency goal when some 60 years ago, NITR was established to research and develop scientific and technological tools to control and eradicate Trypanosomiasis (sleeping sickness in man, nagana/sammoré in cattle), the No. 1 poverty disease of sub-Saharan African countries that is transmitted by tsetse flies. By 1975, NITR's mandate on Trypanosomiasis was expanded to include Onchocerciasis (river blindness) which is transmitted by black flies.
+          {{about.content}}
         </p>
         <a href="#" class="btn btn-success px-5">Read More</a>
       </div>
 
       <div class="col-md-6">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipMiBDoWDTnTGpSQolxDJcxXucCINYcGiGGZXY4G" class="img-fluid shadow-2-strong" alt="" />
+        <img src="{{storage+about.image}}" class="img-fluid shadow-2-strong" alt="" />
       </div>
     </div>
   </div>
