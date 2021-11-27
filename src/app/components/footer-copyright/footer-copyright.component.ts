@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class FooterCopyrightComponent implements OnInit {
   public contact: any = {address: '', phone: '', email: ''};
   private contactPage = 'contact';
-  private base = environment.API;
+  public base = environment.API;
   constructor(
     private api: ApiService,
   ) { }
