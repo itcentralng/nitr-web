@@ -5,8 +5,8 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 import { NewsViewComponent } from './pages/news-view/news-view.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: NewsViewComponent },
+  { path: '', component: HomeComponent },
+  { path: 'news-view', component: NewsViewComponent },
   { path: 'maintenance', component: MaintenanceComponent },
 ];
 
