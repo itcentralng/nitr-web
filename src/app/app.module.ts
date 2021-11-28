@@ -32,6 +32,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 import { UpcomingEventsComponent } from './components/upcoming-events/upcoming-events.component';
 import { FooterCopyrightComponent } from './components/footer-copyright/footer-copyright.component';
 import { NewsContentComponent } from './components/news-content/news-content.component';
+import { RelatedNewsComponent } from './components/related-news/related-news.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { NewsContentComponent } from './components/news-content/news-content.com
     UpcomingEventsComponent,
     FooterCopyrightComponent,
     NewsContentComponent,
+    RelatedNewsComponent,
   ],
   imports: [
     BrowserModule, 
