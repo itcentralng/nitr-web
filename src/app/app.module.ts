@@ -40,6 +40,8 @@ import { FooterCopyrightComponent } from './components/footer-copyright/footer-c
 import { NewsContentComponent } from './components/news-content/news-content.component';
 import { RelatedNewsComponent } from './components/related-news/related-news.component';
 import { NewsViewComponent } from './pages/news-view/news-view.component';
+import { PostComponent } from './components/post/post.component';
+import { NewsListComponent } from './components/news-list/news-list.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { NewsViewComponent } from './pages/news-view/news-view.component';
     NewsContentComponent,
     RelatedNewsComponent,
     NewsViewComponent,
+    PostComponent,
+    NewsListComponent,
   ],
   imports: [
     // Markdown

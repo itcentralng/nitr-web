@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
-import { NewsViewComponent } from './pages/news-view/news-view.component';
+import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'news-view', component: NewsViewComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'news/:id', component: NewsComponent },
   { path: 'maintenance', component: MaintenanceComponent },
 ];
 

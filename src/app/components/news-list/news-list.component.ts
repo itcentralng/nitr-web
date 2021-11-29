@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-latest-news',
-  templateUrl: './latest-news.component.html',
-  styleUrls: ['./latest-news.component.css']
+  selector: 'app-news-list',
+  templateUrl: './news-list.component.html',
+  styleUrls: ['./news-list.component.css']
 })
-export class LatestNewsComponent implements OnInit {
+export class NewsListComponent implements OnInit {
   public latestnews: any;
   private postPage = 'posts';
   constructor(
@@ -16,7 +16,7 @@ export class LatestNewsComponent implements OnInit {
   ngOnInit(): void {
     this.api.get(
       this.postPage+
-      '?type.name=news&_limit=5&_sort=createdAt:desc'
+      '?type.name=news&_limit=20&_sort=createdAt:desc'
       ).subscribe(response => {
       this.latestnews = response;
     });

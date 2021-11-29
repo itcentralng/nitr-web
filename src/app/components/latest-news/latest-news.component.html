@@ -9,7 +9,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4 p-5" *ngFor="let news of latestnews" >
         <div class="col">
           <div class="card h-100">
-            <img src="{{news.image.url}}" class="card-img-top" alt="..." />
+            <img *ngIf="news.image" src="{{news.image.url}}" class="card-img-top" alt="..." />
             <div class="card-body">
               <div class="py-3">
                 <div class="row">

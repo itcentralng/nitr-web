@@ -16,7 +16,7 @@ export class FooterCopyrightComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.api.get(this.base+this.contactPage).subscribe(response => {
+    this.api.get(this.contactPage).subscribe(response => {
       this.contact = response;
     })
   }

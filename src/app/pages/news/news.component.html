@@ -1,1 +1,11 @@
-<p>news works!</p>
+<app-top-navbar></app-top-navbar>
+<ng-template [ngIf]="id" [ngIfElse]="allnews">
+    <app-post [post]="news"></app-post>
+    <app-related-news related="related"></app-related-news>  
+</ng-template>
+
+<ng-template #allnews>
+    <app-news-list></app-news-list>
+</ng-template>
+
+<app-footer-copyright></app-footer-copyright>
