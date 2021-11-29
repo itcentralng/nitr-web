@@ -1,0 +1,40 @@
+<!--Blog-->
+<div class="card-body">
+    <h2 class="card-title text-center fw-bold pt-4">
+      Departments
+    </h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
+      <div class="col" *ngFor="let department of departments" >
+        <div class="card h-100">
+          <img *ngIf="department.image" src="{{department.image.url}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <div class="py-3">
+              <div class="row">
+                <div class="col">
+                  <p class="text-start">{{department.createdAt}}</p>
+                </div>
+                <div class="col">
+                  <p class="text-end">
+                    <span class="badge bg-dark p-2 px-4 text-end">department</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h5 class="card-title">
+              {{department.title}}
+            </h5>
+            <!-- <p class="card-text">
+              <markdown ngPreserveWhitespaces>
+                {{department.content}}
+              </markdown>
+            </p> -->
+
+            <p>
+              <a class="text-success" [routerLink]="['/departments', department._id]">- Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

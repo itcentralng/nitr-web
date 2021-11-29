@@ -32,32 +32,11 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <ng-container *ngFor="let link of links">
         <!-- Singles -->
-        <li class="nav-item {{link.isActive}}" *ngIf="link.children.length===0">
+        <li class="nav-item {{link.isActive}}">
           <a class="nav-link {{link.isActive}}" aria-current="page" [routerLink]="[link.url]" (click)="activateLink(link.url)">{{link.name}}</a>
         </li>
+        </ng-container>
         <!-- Dropdown -->
-        <li class="nav-item dropdown" *ngIf="link.children.length>0" dropdown>
-          <a
-            class="nav-link dropdown-toggle {{link.isActive}}"
-            dropdownToggle
-            aria-current="page"
-            [routerLink]="[link.url]"
-            (click)="activateLink(link.url)"
-          >
-            {{link.name}}
-          </a>
-          <div class="dropdown-menu" *dropdownMenu>
-            <a
-              class="dropdown-item"
-              *ngFor="let child of link.children"
-              [routerLink]="[child.url]"
-              (click)="activateLink(child.url)"
-            >
-              {{child.name}}
-            </a>
-          </div>
-        </li>
-    </ng-container>
       </ul>
     </div>
   </div>

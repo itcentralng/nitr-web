@@ -8,12 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TopNavbarComponent implements OnInit {
 
   links = [
-    {'name': 'Home', 'url': '/', 'isActive': 'active', 'children': []},
-    {'name': 'About', 'url': '/about', 'isActive': 'inactive', 'children': []},
-    {'name': 'Departments', 'url': '/departments', 'isActive': 'inactive', 'children': [
-      {'name': 'IT', 'url': '/departments/it', 'isActive': 'inactive'},
-    ]},
-    {'name': 'News', 'url': '/news', 'isActive': 'inactive', 'children': []},
+    {'name': 'Home', 'url': '/', 'isActive': 'active'},
+    {'name': 'About', 'url': '/about', 'isActive': 'inactive'},
+    {'name': 'Departments', 'url': '/departments', 'isActive': 'inactive'},
+    {'name': 'News', 'url': '/news', 'isActive': 'inactive'},
   ];
 
   constructor() { }

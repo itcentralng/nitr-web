@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-upcoming-events',
-  templateUrl: './upcoming-events.component.html',
-  styleUrls: ['./upcoming-events.component.css']
+  selector: 'app-department-list',
+  templateUrl: './department-list.component.html',
+  styleUrls: ['./department-list.component.css']
 })
-export class UpcomingEventsComponent implements OnInit {
-  public events: any = [];
+export class DepartmentListComponent implements OnInit {
+  public departments: any;
   private postPage = 'posts';
   constructor(
     private api: ApiService,
@@ -16,9 +16,9 @@ export class UpcomingEventsComponent implements OnInit {
   ngOnInit(): void {
     this.api.get(
       this.postPage+
-      '?type.name=events&_limit=5&_sort=createdAt:desc'
+      '?type.name=departments&_limit=20&_sort=createdAt:desc'
       ).subscribe(response => {
-      this.events = response;
+      this.departments = response;
     });
   }
 

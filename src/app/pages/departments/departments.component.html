@@ -1,1 +1,7 @@
-<p>departments works!</p>
+<ng-template [ngIf]="id" [ngIfElse]="alldepartments">
+    <app-post [post]="department"></app-post>
+</ng-template>
+
+<ng-template #alldepartments>
+    <app-department-list></app-department-list>
+</ng-template>

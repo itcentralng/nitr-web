@@ -45,6 +45,7 @@ import { NewsListComponent } from './components/news-list/news-list.component';
 import { AboutComponent } from './pages/about/about.component';
 import { EventsComponent } from './pages/events/events.component';
 import { EventListComponent } from './components/event-list/event-list.component';
+import { DepartmentListComponent } from './components/department-list/department-list.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { EventListComponent } from './components/event-list/event-list.component
     AboutComponent,
     EventsComponent,
     EventListComponent,
+    DepartmentListComponent,
   ],
   imports: [
     // Markdown

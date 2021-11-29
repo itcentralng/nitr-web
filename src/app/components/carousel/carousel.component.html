@@ -1,20 +1,9 @@
 <!--Carousel-->
-<div class="pb-5 pt-1">
+<div class="pb-5 pt-1" *ngIf="slides.length>0">
   <mdb-carousel [controls]="true" [indicators]="true" [dark]="true">
-    <mdb-carousel-item>
+    <mdb-carousel-item *ngFor="let slide of slides">
       <img
-        src="https://lh5.googleusercontent.com/p/AF1QipMiBDoWDTnTGpSQolxDJcxXucCINYcGiGGZXY4G"
-        class="d-block w-100 h-50"
-        alt="..."
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <!-- <h5>First slide label</h5> -->
-      </div>
-    </mdb-carousel-item>
-
-    <mdb-carousel-item>
-      <img
-        src="https://lh5.googleusercontent.com/p/AF1QipMiBDoWDTnTGpSQolxDJcxXucCINYcGiGGZXY4G"
+        src="{{slide.url}}"
         class="d-block w-100 h-50"
         alt="..."
       />
