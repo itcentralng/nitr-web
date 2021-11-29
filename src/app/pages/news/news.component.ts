@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -18,7 +18,11 @@ export class NewsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    ) { }
+    private router: Router,
+    ) { 
+      // force route reload whenever params change;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    }
 
   ngOnInit(): void {
         this.api.get(

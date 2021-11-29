@@ -42,6 +42,7 @@ import { RelatedNewsComponent } from './components/related-news/related-news.com
 import { NewsViewComponent } from './pages/news-view/news-view.component';
 import { PostComponent } from './components/post/post.component';
 import { NewsListComponent } from './components/news-list/news-list.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NewsListComponent } from './components/news-list/news-list.component';
     NewsViewComponent,
     PostComponent,
     NewsListComponent,
+    AboutComponent,
   ],
   imports: [
     // Markdown
