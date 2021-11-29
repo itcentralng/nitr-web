@@ -10,10 +10,12 @@
           class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
           style="width: 60px"
         />
-        <p class="card-text">
-          {{about.content}}
+        <p class="card-text" *ngIf="about.content">
+          <markdown ngPreserveWhitespaces>
+            {{about.content.slice(0,500)}}...
+          </markdown>
         </p>
-        <a href="#" class="btn btn-success px-5">Read More</a>
+        <a [routerLink]="['/about']" class="btn btn-success px-5">Read More</a>
       </div>
 
       <div class="col-md-6 pt-4">
