@@ -37,6 +37,9 @@ import { AboutNitrComponent } from './components/about-nitr/about-nitr.component
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { UpcomingEventsComponent } from './components/upcoming-events/upcoming-events.component';
 import { FooterCopyrightComponent } from './components/footer-copyright/footer-copyright.component';
+import { NewsContentComponent } from './components/news-content/news-content.component';
+import { RelatedNewsComponent } from './components/related-news/related-news.component';
+import { NewsViewComponent } from './pages/news-view/news-view.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { FooterCopyrightComponent } from './components/footer-copyright/footer-c
     LatestNewsComponent,
     UpcomingEventsComponent,
     FooterCopyrightComponent,
+    NewsContentComponent,
+    RelatedNewsComponent,
+    NewsViewComponent,
   ],
   imports: [
     // Markdown
