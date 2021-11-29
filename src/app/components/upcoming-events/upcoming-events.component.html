@@ -1,19 +1,46 @@
-<!--Events-->
-<div class="">
-  <div class="card-body">
-    <h2 class="card-title text-center text-success fw-bold">Upcoming Events</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://lh5.googleusercontent.com/p/AF1QipMiBDoWDTnTGpSQolxDJcxXucCINYcGiGGZXY4G"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="text-start">Apr 14, 2021</p>
-            <h5 class="card-title">2021 2nd Quarterly Lecture</h5>
-            <p><a class="text-success" href="#">- Read More</a></p>
+<!--Blog-->
+<div class="py-5" *ngIf="events.length>0">
+  <div class="card" style="background-color: #4fce2f">
+    <div class="card-body">
+      <h2 class="card-title text-center text-white fw-bold pt-4">
+        Upcoming Events
+      </h2>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+        <div class="col" *ngFor="let event of events">
+          <div class="card h-100">
+            <img
+              *ngIf="event.image"
+              src="{{event.image.url}}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="py-3">
+                <div class="row">
+                  <div class="col">
+                    <p class="text-start">{{event.createdAt}}</p>
+                  </div>
+                  <div class="col">
+                    <p class="text-end">
+                      <span class="badge bg-dark p-2 px-4 text-end">Event</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h5 class="card-title">
+                {{event.title}}
+              </h5>
+              <!-- <p class="card-text">
+                It has roots in a piece of classical Latin literature from 45
+                BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at ...
+              </p> -->
+
+              <p>
+                <a class="text-success" [routerLink]="['/events', event._id]">- Read More</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,40 @@
+<!--Blog-->
+<div class="card-body">
+    <h2 class="card-title text-center fw-bold pt-4">
+      Events
+    </h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
+      <div class="col" *ngFor="let event of events" >
+        <div class="card h-100">
+          <img *ngIf="event.image" src="{{event.image.url}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <div class="py-3">
+              <div class="row">
+                <div class="col">
+                  <p class="text-start">{{event.createdAt}}</p>
+                </div>
+                <div class="col">
+                  <p class="text-end">
+                    <span class="badge bg-dark p-2 px-4 text-end">Event</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h5 class="card-title">
+              {{event.title}}
+            </h5>
+            <!-- <p class="card-text">
+              <markdown ngPreserveWhitespaces>
+                {{event.content}}
+              </markdown>
+            </p> -->
+
+            <p>
+              <a class="text-success" [routerLink]="['/event', event._id]">- Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

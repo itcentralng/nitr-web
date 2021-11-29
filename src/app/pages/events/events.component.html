@@ -1,0 +1,7 @@
+<ng-template [ngIf]="id" [ngIfElse]="allevents">
+    <app-post [post]="event"></app-post>
+</ng-template>
+
+<ng-template #allevents>
+    <app-event-list></app-event-list>
+</ng-template>

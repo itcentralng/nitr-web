@@ -43,6 +43,8 @@ import { NewsViewComponent } from './pages/news-view/news-view.component';
 import { PostComponent } from './components/post/post.component';
 import { NewsListComponent } from './components/news-list/news-list.component';
 import { AboutComponent } from './pages/about/about.component';
+import { EventsComponent } from './pages/events/events.component';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { AboutComponent } from './pages/about/about.component';
     PostComponent,
     NewsListComponent,
     AboutComponent,
+    EventsComponent,
+    EventListComponent,
   ],
   imports: [
     // Markdown

@@ -4,8 +4,8 @@
           News
         </h2>
   
-        <div class="row row-cols-1 row-cols-md-3 g-4 p-5" *ngFor="let news of latestnews" >
-          <div class="col">
+        <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
+          <div class="col" *ngFor="let news of latestnews" >
             <div class="card h-100">
               <img *ngIf="news.image" src="{{news.image.url}}" class="card-img-top" alt="..." />
               <div class="card-body">
