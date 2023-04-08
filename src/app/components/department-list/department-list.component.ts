@@ -14,12 +14,22 @@ export class DepartmentListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.api.get(
-      this.postPage+
-      '?type.name=departments&_limit=20&_sort=createdAt:desc'
-      ).subscribe(response => {
-      this.departments = response;
-    });
+    // Fetch API
+    // this.api.get(
+    //   this.postPage+
+    //   '?type.name=departments&_limit=20&_sort=createdAt:desc'
+    //   ).subscribe(response => {
+    //   this.departments = response;
+    // });
+
+    // Fetch Data
+    this.departments = [
+      {
+        title:"Animal African Trypanosomiasis Research Department",
+        image: {url:"assets/departments/1.jpg"},
+        _id:1
+      }
+    ]
   }
 
 }
