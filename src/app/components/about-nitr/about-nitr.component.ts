@@ -14,9 +14,17 @@ export class AboutNitrComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.api.get(this.aboutPage).subscribe(response => {
-      this.about = response;
-    })
+    // Fetch API
+    // this.api.get(this.aboutPage).subscribe(response => {
+    //   this.about = response;
+    // })
+
+    // Fetch Data
+      this.about = {
+        title:'About US',
+        content: "NITR has mandate to conduct research and develop appropriate technologies, as well as processes in the control and elimination of the two diseases (African trypanosomiasis and onchocerciasis) and their vectors, tsetse and black flies.",
+        image:{url:'assets/slides/1.jpg'}
+      }
   }
 
 }
