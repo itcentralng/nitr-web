@@ -14,11 +14,19 @@ export class CarouselComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.api.get(
-      this.sliderPage
-      ).subscribe((response: any) => {
-        this.slides = response.images;
-    });
+    // Fetch API
+    // this.api.get(
+    //   this.sliderPage
+    //   ).subscribe((response: any) => {
+    //     this.slides = response.images;
+    // });
+    // Local Fetch
+    this.slides = [
+      {url:"assets/slides/1.jpg"},
+      {url:"assets/slides/2.jpg"},
+      {url:"assets/slides/3.jpg"},
+      {url:"assets/slides/4.jpg"},
+    ]
   }
 
 }
