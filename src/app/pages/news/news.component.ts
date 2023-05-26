@@ -27,16 +27,17 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
         this.api.get(
           this.postPage+
-          '?_id='+this.id
+          '?filters[id][$eq]='+this.id
           ).subscribe((response: any) => {
-          this.news = response[0];
+          this.news = response.data[0].attributes
+          console.log(response);
         });
         
-        this.api.get(
-          this.postPage+
-          '?type.name=news&_id_ne='+this.id+'&_limit=5&_sort=createdAt:desc'
-          ).subscribe(response => {
-          this.related = response;
-        });
+        // this.api.get(
+        //   this.postPage+
+        //   '?type.name=news&_id_ne='+this.id+'&_limit=5&_sort=createdAt:desc'
+        //   ).subscribe(response => {
+        //   this.related = response;
+        // });
     }
 }

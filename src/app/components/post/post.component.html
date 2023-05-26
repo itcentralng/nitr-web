@@ -4,7 +4,7 @@
     </h3>
     <img
       *ngIf="post.image"
-      src="{{post.image.url}}"
+      src="{{storage+post.image.data.attributes.url}}"
       class="card-img-top post-img"
       alt="..."
     />

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-news-list',
@@ -9,6 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class NewsListComponent implements OnInit {
   public latestnews: any;
   private postPage = 'posts';
+  public storage = environment.STORAGE
   constructor(
     private api: ApiService,
   ) { }
@@ -16,9 +18,10 @@ export class NewsListComponent implements OnInit {
   ngOnInit(): void {
     this.api.get(
       this.postPage+
-      '?type.name=news&_limit=20&_sort=createdAt:desc'
+      '?filters[type][name][$eq]=news&populate=*'
       ).subscribe(response => {
       this.latestnews = response;
+      this.latestnews = this.latestnews.data;
     });
   }
 

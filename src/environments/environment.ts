@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'http://localhost:1337/',
-  STORAGE: 'https://nitr.fra1.digitaloceanspaces.com/',
+  API: 'http://localhost:1337/api/',
+  STORAGE: 'http://localhost:1337',
 };
 
 /*

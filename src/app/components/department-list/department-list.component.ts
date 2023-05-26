@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-department-list',
@@ -7,6 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./department-list.component.css']
 })
 export class DepartmentListComponent implements OnInit {
+  public storage = environment.STORAGE
   public departments: any;
   private postPage = 'posts';
   constructor(
@@ -15,21 +17,22 @@ export class DepartmentListComponent implements OnInit {
 
   ngOnInit(): void {
     // Fetch API
-    // this.api.get(
-    //   this.postPage+
-    //   '?type.name=departments&_limit=20&_sort=createdAt:desc'
-    //   ).subscribe(response => {
-    //   this.departments = response;
-    // });
+    this.api.get(
+      this.postPage+
+      '?filters[type][name][$eq]=departments&populate=*'
+      ).subscribe((response: any) => {
+      this.departments = response.data;
+      console.log(this.departments)
+    });
 
     // Fetch Data
-    this.departments = [
-      {
-        title:"Animal African Trypanosomiasis Research Department",
-        image: {url:"assets/departments/1.jpg"},
-        _id:1
-      }
-    ]
+    // this.departments = [
+    //   {
+    //     title:"Animal African Trypanosomiasis Research Department",
+    //     image: {url:"assets/departments/1.jpg"},
+    //     _id:1
+    //   }
+    // ]
   }
 
 }

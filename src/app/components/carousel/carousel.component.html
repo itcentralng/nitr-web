@@ -3,7 +3,7 @@
   <mdb-carousel [controls]="true" [indicators]="true" [dark]="true">
     <mdb-carousel-item *ngFor="let slide of slides">
       <img
-        src="{{slide.url}}"
+        src="{{storage+slide.attributes.url}}"
         class="d-block w-100 h-50"
         alt="..."
       />

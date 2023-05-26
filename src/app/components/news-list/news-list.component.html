@@ -7,12 +7,12 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
           <div class="col" *ngFor="let news of latestnews" >
             <div class="card h-100">
-              <img *ngIf="news.image" src="{{news.image.url}}" class="card-img-top" alt="..." />
+              <img *ngIf="news.attributes.image.url" src="{{storage+news.attributes.image.url}}" class="card-img-top" alt="..." />
               <div class="card-body">
                 <div class="py-3">
                   <div class="row">
                     <div class="col">
-                      <p class="text-start">{{news.createdAt}}</p>
+                      <p class="text-start">{{news.attributes.createdAt}}</p>
                     </div>
                     <div class="col">
                       <p class="text-end">
@@ -22,16 +22,16 @@
                   </div>
                 </div>
                 <h5 class="card-title">
-                  {{news.title}}
+                  {{news.attributes.title}}
                 </h5>
                 <!-- <p class="card-text">
                   <markdown ngPreserveWhitespaces>
-                    {{news.content}}
+                    {{news.attributes.content}}
                   </markdown>
                 </p> -->
   
                 <p>
-                  <a class="text-success" [routerLink]="['/news', news._id]">- Read More</a>
+                  <a class="text-success" [routerLink]="['/news', news.id]">- Read More</a>
                 </p>
               </div>
             </div>

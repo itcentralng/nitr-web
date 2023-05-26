@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-post',
@@ -6,7 +7,9 @@ import { Component, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Input() post = {title: '', content: '', image: {url: ''}, createdAt: '', type: {name: ''}};
+  @Input() post = {title: '', content: '', image: {data:{attributes:{url: ''}}}, createdAt: '', type: {name: ''}};
+
+  public storage = environment.STORAGE
 
   constructor() { }
 
