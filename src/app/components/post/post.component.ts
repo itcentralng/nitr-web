@@ -11,6 +11,10 @@ export class PostComponent implements OnInit {
 
   public storage = environment.STORAGE
 
+  public getImages = (content: string)=>{
+    return content.split("/uploads/").join(this.storage+'/uploads/');
+  }
+
   constructor() { }
 
   ngOnInit(): void {
